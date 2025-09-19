@@ -1,5 +1,5 @@
 {
-    "lastProcessedBlock": "9236720",
+    "lastProcessedBlock": "9236767",
     "tournaments": {
         "0x649d5a41969d914af66d989b7793dd3a28d32896": {
             "claims": {
@@ -2660,7 +2660,17 @@
                 }
             },
             "address": "0x7a4249490b19187c081ec65ae0e9909479a71b3e"
+        },
+        "0x2c3705cd896e268bf84cd8da79cd7bc677041544": {
+            "claims": {
+                "0x6312793b5e1ac4e860ea8f3fb887e367f96fc95b153ecf407b3160fa352b73a0": {
+                    "tx": "0xf8bed2fdf4d0b6981ecbd1fd6a3c64f967f4b3e6b62f296d67f67bf263460a5d",
+                    "blockNumber": "9236732",
+                    "timestamp": "1758303156"
+                }
+            },
+            "address": "0x2c3705cd896e268bf84cd8da79cd7bc677041544"
         }
     },
-    "lastTimestamp": "1758268512"
+    "lastTimestamp": "1758303156"
 }
