@@ -43,7 +43,7 @@ async function checkForEvent() {
         const arrayOfLogs = await Promise.all(
           blockRanges.map(({ fromBlock, toBlock }) =>
             client.getLogs({
-              event: parseAbiItem('event commitmentJoined(bytes32 root)'),
+              event: parseAbiItem('event CommitmentJoined(bytes32 commitment, bytes32 finalStateHash, address indexed caller)'),
               fromBlock,
               toBlock,
             })
@@ -54,7 +54,7 @@ async function checkForEvent() {
         let lastTimestamp = BigInt(data.lastTimestamp || 0)
 
         if (logs.length > 0) {
-            console.log(`Found ${logs.length} occurrences of 'commitmentJoined' event!`)
+            console.log(`Found ${logs.length} occurrences of 'CommitmentJoined' event!`)
             console.log(JSON.stringify(logs, bigintReplacer, 4))
             const toVerify = []
             const blockCache = new Map()
@@ -73,7 +73,7 @@ async function checkForEvent() {
                     address: log.address,
                 }
                 toVerify.push(tournament)
-                tournament.claims[log.args.root] = {
+                tournament.claims[log.args.commitment] = {
                     tx: log.transactionHash,
                     blockNumber: log.blockNumber.toString(),
                     timestamp: blockTimestamp.toString(),

@@ -4,7 +4,7 @@ This project provides automated monitoring for Cartesi blockchain events and con
 
 ## Features
 
-- **Event Monitoring:** Watches for `commitmentJoined` events on the blockchain and detects disputes in tournaments.
+- **Event Monitoring:** Watches for `CommitmentJoined` events on the blockchain and detects disputes in tournaments.
 - **Balance Monitoring:** Checks if a specified node address has a critically low balance.
 - **Settlement Monitoring:** Monitors the `canSettle` and `getCurrentSealedEpoch` contract functions to detect when epochs can be settled or if there are issues with claims.
 - **Discord Notifications:** Sends alerts to a Discord channel via webhook when important events or issues are detected.
@@ -14,7 +14,7 @@ This project provides automated monitoring for Cartesi blockchain events and con
 
 ### 1. Blockchain Event Monitoring
 
-- The `monitor.js` script connects to the Sepolia network and listens for `commitmentJoined` events.
+- The `monitor.js` script connects to the Sepolia network and listens for `CommitmentJoined` events.
 - It tracks claims for each tournament and notifies Discord if multiple claims (disputes) are detected.
 - It also checks the balance of a specified node address and sends an alert if the balance is below a threshold.
 
