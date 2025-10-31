@@ -43,7 +43,7 @@ async function checkForEvent() {
         const arrayOfLogs = await Promise.all(
           blockRanges.map(({ fromBlock, toBlock }) =>
             client.getLogs({
-              event: parseAbiItem('event CommitmentJoined(bytes32 commitment, bytes32 finalStateHash, address indexed caller)'),
+              event: parseAbiItem('event CommitmentJoined(bytes32 commitment, bytes32 finalStateHash, address indexed claimer)'),
               fromBlock,
               toBlock,
             })
@@ -77,6 +77,8 @@ async function checkForEvent() {
                     tx: log.transactionHash,
                     blockNumber: log.blockNumber.toString(),
                     timestamp: blockTimestamp.toString(),
+                    finalStateHash: log.args.finalStateHash,
+                    claimer: log.args.claimer,
                 }
                 data.tournaments[log.address] = tournament
             }
