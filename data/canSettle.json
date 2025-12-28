@@ -1,13 +1,13 @@
 {
     "isFinished": false,
-    "epochNumber": "6",
+    "epochNumber": "7",
     "winnerCommitment": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "lastCanSettleTimestamp": null,
     "currentSealedEpoch": {
-        "epochNumber": "6",
-        "inputIndexLowerBound": "1",
-        "inputIndexUpperBound": "2",
-        "tournament": "0x330F60E92E1AEA6b338f981636721B45113b9Ece",
-        "createdAt": 1766279890415
+        "epochNumber": "7",
+        "inputIndexLowerBound": "2",
+        "inputIndexUpperBound": "3",
+        "tournament": "0x54c184f170fd3c36bca0643b36B190d1B95c15f1",
+        "createdAt": 1766891705197
     }
 }
